@@ -1,0 +1,46 @@
+.sphere{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.sphere span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    background: radial-gradient(#ccc,#fff);
+    border-radius: 50%;
+}
+.sphere:nth-child(2){
+    transform: rotate(90deg)
+}
+.sphere:nth-child(3){
+    transform: rotate(45deg)
+}
+.sphere:nth-child(4){
+    transform: rotate(-45deg)
+}
+.sphere span:nth-child(1){
+    transform: rotateY(0deg);
+}
+.sphere span:nth-child(2){
+    transform: rotateY(30deg);
+}
+.sphere span:nth-child(3){
+    transform: rotateY(60deg);
+}
+.sphere span:nth-child(4){
+    transform: rotateY(90deg);
+}
+.sphere span:nth-child(5){
+    transform: rotateY(120deg);
+}
+.sphere span:nth-child(6){
+    transform: rotateY(150deg);
+}

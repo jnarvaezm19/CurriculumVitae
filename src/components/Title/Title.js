@@ -1,6 +1,8 @@
 import React,{useState,useRef, useEffect} from 'react'
 import TitleStyle from './Title.module.css'
-import VideoBanner from '../Video/VideoBanner'
+import SplitText from '../SplitText/SplitText';
+import Sphere from './Sphere';
+import './fed.css'
 
 let scrollStyle = {
 }
@@ -25,20 +27,44 @@ const Title = () => {
     
     return(
         <div className={TitleStyle.Title}>
-            <h2 className={TitleStyle.h2Title}>
-                You're Already Watch My Cv
-            </h2>
-            <p className={TitleStyle.h2Title}>
-                Scroll to start ;)
-            </p>
+            <div className={TitleStyle.rotate}>
+                <Sphere/>
+                <Sphere/>
+                <Sphere/>
+                <Sphere/>
+            </div>
+            <SplitText/>
             <section
                 className={TitleStyle.section}
                 ref={section}
                 style={scrollStyle}
             >
+                <h3>
+                    <div className={TitleStyle.center}>
+                        <ul>
+                            <li>F</li>
+                            <li>R</li>
+                            <li>O</li>
+                            <li>N</li>
+                            <li>T</li>
+                            <li>E</li>
+                            <li>N</li>
+                            <li>D</li>
+                            <li className={TitleStyle.space}></li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>V</li>
+                            <li>E</li>
+                            <li>L</li>
+                            <li>O</li>
+                            <li>P</li>
+                            <li>E</li>
+                            <li>R</li>
+                        </ul>
+                    </div>
+                </h3>
             </section>
             <div className={TitleStyle.containerJc}>
-                
             </div>
         </div>
     )

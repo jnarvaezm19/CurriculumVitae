@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 :local(.section){
     position: fixed;
@@ -30,4 +31,28 @@
 :local(.h2Name){
     margin-bottom: 20px;
     text-align: center;
+}
+:local(.rotate){
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+    zoom: 4;
+}
+@keyframes rotate{
+    0%{ transform: rotateX(0deg) rotateY(0deg); }
+    100%{ transform: rotateX(360deg) rotateY(360deg); }
+}
+:local(.center){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+:local(.space){
+    width: 10px;
+    
 }
