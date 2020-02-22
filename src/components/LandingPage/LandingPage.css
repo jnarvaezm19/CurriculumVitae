@@ -1,0 +1,110 @@
+.open{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+.open .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    animation: open 1s ease-in-out forwards;
+}
+.open .layer:nth-child(1){
+    background: #000;
+    z-index: 2;
+}
+.open .layer:nth-child(2){
+    background: #03A9F4;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+@keyframes open{
+    0%{ transform: scaleY(1); }
+    100%{ transform: scaleY(0); }
+}
+.scBanner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.bannerText{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 700px;
+}
+.bannerText h2, .bannerText h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform-origin: left;
+    text-transform: uppercase;
+    transform: scaleX(0);
+    font-weight: bold;
+    animation: revealTextReverse 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.bannerText h3{
+    animation-delay: 3s;
+}
+.bannerText h2::before,
+.bannerText h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+.bannerText h3::before{
+    animation-delay: 4s;
+}
+@keyframes revealText{
+    0%{ transform: scaleX(1); }
+    100%{ transform: scaleX(0); }
+}
+@keyframes revealTextReverse{
+    0%{ transform: scaleX(0); }
+    100%{ transform: scaleX(1); }
+}
+.bannerText p{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 1.2em;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 5s;
+}
+@keyframes fadeIn{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+.bulb{
+    opacity: 0;
+    position: absolute;
+    right: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 6s;
+}
