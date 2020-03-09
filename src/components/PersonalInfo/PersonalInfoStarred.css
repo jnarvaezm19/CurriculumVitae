@@ -1,0 +1,118 @@
+.principalSquare{
+    display: flex;
+    width: 100%;
+}
+.sectionSquare{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    position: relative;
+    width:  400px;
+    height: 400px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    margin: 0 !important;
+}
+.contentSquare p{
+    width: auto;
+    height: 100%;
+    position: relative;
+    padding: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+    transition: .5s ease;
+    z-index: 1000;
+}
+.contentSquare  a{
+    width: auto;
+    position: relative;
+    padding: .75em;
+    text-align: center;
+    transition: .5s ease;
+    background: #fff;
+    color: #457AF4;
+    border: solid 2px #457AF4;
+    z-index: 1000;
+    border-radius: .5em;
+    text-decoration: none;
+    bottom: 0;
+    display: inline-block;
+    margin-top: 10px;
+}
+.contentSquare:hover p, .contentSquare:hover h2{
+    color: #fff;
+    transition: .5s;
+}
+.contentSquare h2{
+    width: auto;
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    transition: .5s ease;
+    z-index: 1000;
+}
+.sp1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #000; 
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 1s;
+    animation: animate 10s linear infinite;
+    background: rgba(255, 14, 255, 0.8);
+}
+.contentSquare:hover .sp1{
+    border: none;
+    background: rgba(255, 14, 255, 0.8);
+}
+.sp2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #000; 
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 1s;
+    animation: animate2 10s linear infinite;
+    background: rgba(255, 14, 25, 0.8);
+}
+.contentSquare:hover .sp2{
+    border: none;
+    background: rgba(255, 14, 25, 0.8);
+}
+
+.sp3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #000; 
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: .5s;
+    animation: animate 8s linear infinite;
+    background: #fff;
+}
+.contentSquare:hover .sp3{
+    border: none;
+    background: rgba(255, 142, 245, 0.5);
+}
+
+@keyframes animate{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+@keyframes animate2{
+    0%{ transform: rotate(360deg); }
+    100%{ transform: rotate(0deg); }
+}

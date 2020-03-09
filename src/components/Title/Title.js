@@ -3,6 +3,7 @@ import TitleStyle from './Title.module.css'
 import SplitText from '../SplitText/SplitText';
 import Sphere from './Sphere';
 import './fed.css'
+import PersonalInfoStarred from '../PersonalInfo/PersonalInfoStarred';
 
 let scrollStyle = {
 }
@@ -65,6 +66,7 @@ const Title = () => {
                 </h3>
             </section>
             <div className={TitleStyle.containerJc}>
+                <PersonalInfoStarred/>
             </div>
         </div>
     )
